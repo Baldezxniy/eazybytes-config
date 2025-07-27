@@ -5,8 +5,8 @@ eureka:
   instance:
     hostname: localhost
   client:
-    fetchRegistry: false
-    registerWithEureka: false
+    fetchRegistry: false  # This Eureka server will not fetch registry information from other Eureka servers (used in peer-to-peer setups)
+    registerWithEureka: false  # This Eureka server will not register itself with another Eureka server
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
     
